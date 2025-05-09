@@ -16,7 +16,7 @@ export default function App() {
     e.preventDefault();
     setLoading(true);
 
-    const baseURL = 'http://localhost:8000'; // Cambiar si es otra PC
+    const baseURL = 'http://192.168.68.60:8000'; // Cambiar si es otra PC
     const endpointPath = endpoint === 'reels' ? '/scrape' : '/scrape-posts';
     const url = `${baseURL}${endpointPath}?username=${username}&cantidad=${count}`;
 
@@ -68,6 +68,8 @@ export default function App() {
 
   return (
     <div className={darkMode ? 'app dark' : 'app light'}>
+    <img src="/image.png" alt="Logo" className="logo" />
+
       <div className="top-container">
         <div className="container">
           <h1>Scraper de Reels / Posts</h1>
